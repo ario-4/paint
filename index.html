@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+        
+
+       }
+       body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(77, 126, 250);
+        min-height: 100vh;
+       }
+       .contaner{
+        width: 800px;
+        height: 500px;
+        background-color: aliceblue;
+        border-radius: 10px;
+        box-shadow: gray;
+     
+
+       }
+       .tools-area{
+         height: 50px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         border-bottom: 1px solid ;
+          padding: 0 15;
+
+       }
+       .tools{
+        display: flex;
+        width: 70%;
+      justify-content: space-between;
+      align-items:center ;
+       }
+       .tools .color{
+     display: flex;
+     align-items: center;
+       }
+       input[type = 'color']{
+        border: none;
+        width: 20px;
+        height: 15px;
+        background-color: transparent;
+        cursor: pointer;
+
+       }
+      
+       label , i{
+        cursor: pointer;
+        margin: 0 3px;
+       }
+       .buttons button{
+        border: none;
+        padding:5px 10px ;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color:lightgray
+
+
+       }
+       .buttons .clear{
+            margin-right: 20px;
+       }
+       .buttons .save{
+        background-color:rgb(77, 126, 250);
+        color: white;
+       }
+
+       .buttons .clear:hover{
+        background-color: aliceblue;
+       }
+       canvas   {
+        width: 100%;
+        height: 450px;
+
+
+    }
+    .active{
+        color: rgb(77, 126, 250);;
+    }
+
+
+       
+    </style>
+</head>
+<body>
+    <div class="contaner">
+        <div class="tools-area">
+            <div class="tools">
+                    <div class="eraser">
+                       <i class="fa-solid fa-eraser"></i> 
+                       <label for="">eraser</label>
+                    </div>
+                    <div class="brush">
+                        <i class="fa-solid fa-paint-brush"></i> 
+                        <label for="">brush</label>
+                    </div>
+                    <div class="coler">
+                        <i class="fa-solid fa-palette"></i> 
+                        <label for="color-picker">choose color</label>
+                        <input id="color-picker" type="color">
+                    </div>
+                        <input id="brush-width" type="range" min="1" max="10">
+                
+                    </div>
+            <div class="buttons">
+                <button class="save">save</button>
+                <button class="clear">clear</button>
+            </div>
+        </div>
+        <div class="draw area">
+            <canvas></canvas>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
